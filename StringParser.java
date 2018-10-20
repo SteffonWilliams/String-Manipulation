@@ -12,10 +12,13 @@ public class StringParser
      *
      * @param s
      * @return String
+     * stringName.toUpperCase()---> this is the method of the string class 
+     * to turn all the letters in a string to uppercase
      */
     public static String upperCaseString(String s)
     {
-        return null;
+        return s.toUpperCase();
+
     }
 
     /**
@@ -26,7 +29,8 @@ public class StringParser
      * @return String
      */
     public static String lowerCaseString(String s) {
-        return null;
+        return s.toLowerCase();
+
     }
 
     /**
@@ -37,7 +41,9 @@ public class StringParser
      * @return String
      */
     public static Character getFirstCharacter(String s) {
-        return null;
+
+        return s.charAt(0); 
+
     }
 
     /**
@@ -49,7 +55,7 @@ public class StringParser
      * @return String
      */
     public static Character getNthCharacter(String s, Integer n) {
-        return null;
+        return s.charAt(n);
     }
 
     /**
@@ -60,7 +66,7 @@ public class StringParser
      * @return String
      */
     public static String upperCaseFirstCharacter(String s) {
-        return null;
+        return s.substring(0,1).toUpperCase() + s.substring(1);
     }
 
     /**
@@ -72,7 +78,15 @@ public class StringParser
      * @return String
      */
     public static String camelCaseString(String s) {
-        return null;
+
+        String c = s.toLowerCase();
+        String ten = c.split(" ")[0];
+        String five = c.split(" ")[1];
+        String twenty = ten.substring(0,1).toUpperCase() + ten.substring(1);
+        String twentyone = five.substring(0,1).toUpperCase() + five.substring(1);
+        String numbersandletters = twenty + twentyone;
+        return numbersandletters.trim();
+        
     }
 
     /**
@@ -84,7 +98,8 @@ public class StringParser
      * @return String
      */
     public static String snakeCaseString(String s) {
-        return null;
+        String a = s.replaceAll(" ", "_").toLowerCase();
+        return a; 
     }
 
     /**
@@ -95,7 +110,8 @@ public class StringParser
      * @return String
      */
     public static Integer getLength(String s) {
-        return null;
+        int length = s.length();
+        return length; 
     }
 
     /**
@@ -109,7 +125,8 @@ public class StringParser
      * @return String
      */
     public static Boolean isEqual(String s1, String s2) {
-        return null;
+        return s1.equals(s2);
+       
     }
 
     /**
@@ -123,6 +140,6 @@ public class StringParser
      * @return String
      */
     public static Boolean isEqualIgnoreCase(String s1, String s2) {
-        return null;
+        return s1.equalsIgnoreCase(s2);
     }
 }
